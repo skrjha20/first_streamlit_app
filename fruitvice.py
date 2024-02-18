@@ -41,8 +41,7 @@ streamlit.write('Thanks for adding ', fruit_choice1)
 
 streamlit.header("Build Your Own Fruit Smoothie")
 my_cur.execute("select * from fruit_load_list")
-my_data_row = my_cur.fetchall()
-#fruits_selected = streamlit.multiselect("Pick some fruits:", my_cur.execute("select * from fruit_load_list"))
+fruits_selected = streamlit.multiselect("Pick some fruits:", my_cur.fetchall())
 #fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(my_cur.execute("select * from fruityvice where name in my_data_row"))
 
