@@ -40,4 +40,5 @@ fruit_choice1 = streamlit.text_input('What fruit would you like to add?','jackfr
 streamlit.write('Thanks for adding ', fruit_choice1)
 
 streamlit.header("Build Your Own Fruit Smoothie")
-my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+#my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+fruits_selected = streamlit.multiselect("Pick some fruits:", my_cur.execute("insert into fruit_load_list values ('from streamlit')"))
