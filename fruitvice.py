@@ -43,5 +43,6 @@ streamlit.header("Build Your Own Fruit Smoothie")
 #my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 fruits_selected = streamlit.multiselect("Pick some fruits:", my_cur.execute("select * from fruit_load_list"))
 #fruits_to_show = my_fruit_list.loc[fruits_selected]
+print(fruits_selected)
 streamlit.dataframe(my_cur.execute("select * from fruityvice where name = fruits_selected"))
 
