@@ -55,10 +55,6 @@ if streamlit.button('Add a Fruit to the List'):
   back_from_function = insert_row_snowflake(new_fruit, my_cnx)
   streamlit.text(back_from_function)
   
-#streamlit.write('What fruit would you like to add?')
-fruit_choice1 = streamlit.text_input('What fruit would you like to add?','jackfruit')
-streamlit.write('Thanks for adding ', fruit_choice1)
-
 #streamlit.header("Build Your Own Fruit Smoothie")
 #my_cur.execute("select * from fruit_load_list")
 #fruits_selected = streamlit.multiselect("Pick some fruits:", initcap(my_cur.fetchall()))
